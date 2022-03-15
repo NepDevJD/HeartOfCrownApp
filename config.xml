@@ -1,11 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.kapsyz.hocCampanionApp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>HeartOfCrownApp</name>
-    <description>Sample Apache Cordova App</description>
-    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
-        Apache Cordova Team
+    <name>Heart of Crown Companion</name>
+    <description>Companion app for the tabletop game Heart of Crown</description>
+    <author email="JDRuntsch@gmail.com" href="https://www.kapsyz.com">
+        Jeremiah Runtsch
     </author>
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    
+    <platform name="android">    
+    <icon src="Assets\Icon\App IconMDPI.png" density="mdpi" />
+    <icon src="Assets\Icon\App IconLDPI.png" density="ldpi" />
+    <icon src="Assets\Icon\App IconHDPI.png" density="hdpi" />
+    <icon src="Assets\Icon\App IconXHDPI.png" density="xhdpi" />
+    <icon src="Assets\Icon\App IconXXHDPI.png" density="xxhdpi" />
+</platform>
 </widget>
+

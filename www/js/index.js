@@ -27,3 +27,8 @@ function onDeviceReady() {
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     document.getElementById('deviceready').classList.add('ready');
 } */
+
+/* window.onclick = e => {
+    console.log(e.target);  // to get the element
+    console.log(e.target.className);  // to get the element tag name alone
+}  */

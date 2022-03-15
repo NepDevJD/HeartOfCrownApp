@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline' 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src 'unsafe-inline'; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script src="js\index.js"></script>
+        <title>Heart of Crown Companion</title>
+    </head>
+    <body>
+        <div class="AppTop">
+            <img class="MenuIcon" src="img\hambergerMenu.png"/>
+            <img class="menuTxt" src="img\TopText.svg">
+            <img class="MenuIcon" src="img\App IconFULL.png"/>
+        </div>
+
+        <div class="sectionsBox">
+        <section class="pSelectBox">
+            <div class="secTopStuf">
+                <h1 class="secHead">Select Princess</h1>
+            </div>
+
+            <section class="pBox" id="1" onClick="reply_click(this.id)">
+                <div class="textBox">
+                <h1 class="pTitle">First Princess</h1>
+                <h1 class="pName">Lulunasaika</h1>
+                </div>
+                <img class="card" src="img\P1C.png"/>
+                <div id="more1">
+                    <p>keowkenowinownrvolejwrnvolejurn
+                        weojfbwoifnwolirfnowlirfn
+                    </p>
+
+                </div>
+            </section>
+            <section class="pBox" id="2">
+                <div class="textBox">
+                <h1 class="pTitle">Second Princess</h1>
+                <h1 class="pName">Laolily</h1>
+                </div>
+                <img class="card" src="img\P2C.png"/>
+            </section>
+            <section class="pBox" id="3">
+                <div class="textBox">
+                <h1 class="pTitle">South Sea Princess</h1>
+                <h1 class="pName">Klam-Klam</h1>
+                </div>
+                <img class="card" src="img\P3C.png"/>
+            </section>
+            <section class="pBox" id="4">
+                <div class="textBox">
+                <h1 class="pTitle">Scholar Princess</h1>
+                <h1 class="pName">Bergamotte</h1>
+                </div>
+                <img class="card" src="img\P4C.png"/>
+            </section>
+            <section class="pBox"id="5">
+                <div class="textBox">
+                <h1 class="pTitle">Princess General</h1>
+                <h1 class="pName">Flammaria</h1>
+                </div>
+                <img class="card" src="img\P5C.png"/>
+            </section>
+            <section class="pBox" id="6">
+                <div class="textBox">
+                <h1 class="pTitle">Princesses</h1>
+                <h1 class="pName">Lain and Shion</h1>
+                </div>
+                <img class="card" src="img\P6C.png"/>
+            </section>
+
+            <div class="botButtons">
+                <form>
+                    <button formaction="princessPage.html"class="backPButton">Confirm</button>
+                  </form>
+            </div>
+
+        </section>
+
+        </div>
+
+    </body>
+</html>

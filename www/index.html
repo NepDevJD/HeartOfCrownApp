@@ -34,26 +34,46 @@
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
         <link rel="stylesheet" href="css/index.css">
-        <style>
-        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Sorts+Mill+Goudy:ital@1&display=swap');
-        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Manrope:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;1,100;1,300&family=Smooch+Sans:wght@300;400;500;600&family=Sorts+Mill+Goudy:ital@1&family=Staatliches&display=swap" rel="stylesheet">
         <title>Heart of Crown Companion</title>
     </head>
     <body>
         <div class="AppTop">
             <img class="MenuIcon" src="img\hambergerMenu.png"/>
-            <h1 class="menuTxt">Heart of Crown</h1>
-            <img class="MenuIcon" src="img\Temp-assests\heart-crown.svg"/>
+            <img class="menuTxt" src="img\TopText.svg">
+            <img class="MenuIcon" src="img\App IconFULL.png"/>
         </div>
-        <div class="allsections">
+
+        <div class="sectionsBox">
         <section class="gameSection">
+            <div class="secTopStuf">
+                <h1 class="secHead">Current Game</h1>
+            </div>
 
 
         </section>
         <section class="turnSection">
-
+            <div class="secTopStuf">
+                <h1 class="secHead">Current Turn</h1>
+            </div>
+            <div class="secCoin">
+                <h3>Coins:</h3>
+                <h4>0</h4>
+                <button class="addCN"></button>
+                <button class="addCN"></button>
+                <button class="addCN"></button>
+            </div>
 
         </section>
+        <div class="botButtons">
+            <form>
+                <button formaction="princessPage.html"class="backPButton">Back Princess</button>
+              </form>
+            <button class="turnButton">End Turn</button>
         </div>
+        </div>
+
     </body>
 </html>
