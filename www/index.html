@@ -39,19 +39,45 @@
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Manrope:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;1,100;1,300&family=Smooch+Sans:wght@300;400;500;600&family=Sorts+Mill+Goudy:ital@1&family=Staatliches&display=swap" rel="stylesheet">
         <title>Heart of Crown Companion</title>
     </head>
-    <body>
-        <div class="AppTop">
+        <div class="AppTop"> 
             <img class="MenuIcon" src="img\hambergerMenu.png"/>
             <img class="menuTxt" src="img\TopText.svg">
             <img class="MenuIcon" src="img\App IconFULL.png"/>
         </div>
-
         <div class="sectionsBox">
         <section class="gameSection">
             <div class="secTopStuf">
                 <h1 class="secHead">Current Game</h1>
             </div>
+            <div class="secPoints">
+                <div class="currPoints">
+                <h3 class="pText" id="spText">Succession Points:</h3>
+                <h4 class="pText" id="pNumGame">0</h4>
+                </div>
+                <div class="pointButtons">
 
+                    <div class="pButtons">
+                <button class="addP">+1</button>
+                <button class="addP">+2</button>
+                <button class="addP">+3</button>
+                <button class="addP">+6</button>
+                    </div>
+                    <div class="mButtons">
+                        <button class="minP">-1</button>
+                        <button class="minP">-2</button>
+                        <button class="cpB">Custom Amount</button>
+                    </div>
+                </div>
+                
+            </div>
+            <section class="princessSec">
+                <h3 class="pText" id="spText">Princess</h3>
+            <div class="buttonBox">
+                <form>
+            <button formaction="princessPage.html"class="backPButton">Back A Princess</button>
+            </form>
+            </div>
+            </section>
 
         </section>
         <section class="turnSection">
@@ -59,20 +85,22 @@
                 <h1 class="secHead">Current Turn</h1>
             </div>
             <div class="secCoin">
-                <h3>Coins:</h3>
-                <h4>0</h4>
-                <button class="addCN"></button>
-                <button class="addCN"></button>
-                <button class="addCN"></button>
+                <div class="currCoin">
+                <h3 class="cText">Coins:</h3>
+                <h4 class="cText" id="cNumTurn">0</h4>
+                </div>
+                <div class="coinButtons">
+                <button class="ccB">Custom Amount</button>
+                <button class="addCN">+1</button>
+                <button class="addCN">+2</button>
+                <button class="addCN">+3</button>
+                </div>
+                
             </div>
-
-        </section>
-        <div class="botButtons">
-            <form>
-                <button formaction="princessPage.html"class="backPButton">Back Princess</button>
-              </form>
+            <div class="buttonBox">
             <button class="turnButton">End Turn</button>
-        </div>
+            </div>
+        </section>
         </div>
 
     </body>

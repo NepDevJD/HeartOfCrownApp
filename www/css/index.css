@@ -131,13 +131,13 @@ section{
 }
 .turnSection{
     margin-top: 5px;
-    height:41vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin-bottom: 5px;
 }.gameSection{
     margin-top: 64px;
-    height:41vh;
+    height:59vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -145,11 +145,15 @@ section{
 .secHead{
     font-size: 20pt;
     font-family: 'Smooch Sans', sans-serif;
+    height:40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .secTopStuf{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    height:40px;
 }
 .sectionsBox{
     height:100vh;
@@ -168,8 +172,8 @@ section{
 
 }
 button{
-    width:45vw;
-    height:6vh;
+    width:60vw;
+    height:40px;
     
     font-family: 'Smooch Sans', sans-serif;
     background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
@@ -218,7 +222,187 @@ button{
     justify-content:space-between;
     height:10vh;
 }
-.card{
+.cardSmall{
     height: inherit;
+    width: auto;
+}
+.secCoin{
+    border-radius: 30px 50px 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    background-color: aliceblue;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom: 10px;
+    margin: 10px;
+}
+.addCN{
+	box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	background:linear-gradient(to bottom, #ffd829 5%, #faad1e 100%);
+	background-color:#ffd829;
+	border-radius:42px;
+	border:2px solid #bd2000;
+	color:#b31800;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+    width: 55px;
+    height: 55px;
+    padding:0;
+}
+.currCoin{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.cText{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    margin-top:15px;
+    margin-bottom: 20px;
+}
+#cNumTurn{
+    font-size: 50px;
+    margin-left: 5px;
+    margin-top: 9px;
+}
 
+.secPoints{
+    border-radius: 30px 50px 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    background-color: aliceblue;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom: 10px;
+    margin: 10px;
+}
+.addP{
+	box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	background:linear-gradient(to bottom, #acfffb 5%, #4558ff 100%);
+	background-color:#ffd829;
+	border-radius:42px;
+	border:2px solid #ffffff;
+	color:#000000;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:13px 13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+    width: 65px;
+    height: 45px;
+    margin:2px;
+}
+.minP{
+    box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	background:linear-gradient(to bottom, #ff7ed8 5%, #c7104d 100%);
+	background-color:#ffd829;
+	border-radius:42px;
+	border:2px solid #ffffff;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:13px 13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+    width: 65px;
+    height: 45px;
+    margin:2px;
+}
+.cpB{
+    box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	background:linear-gradient(to bottom, #a57eff 5%, #3f0088 100%);
+	background-color:#ffd829;
+	border-radius:42px;
+	border:2px solid #ffffff;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+    width: 120px;
+    height: 45px;
+    margin:2px;
+}
+.ccB{
+    box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	background:linear-gradient(to bottom, #a57eff 5%, #3f0088 100%);
+	background-color:#ffd829;
+	border-radius:42px;
+	border:2px solid #ffffff;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:0px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+    width:140px;
+    height: 55px;
+}
+.pButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.mButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.pointButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.currPoints{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.pText{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin-top:15px;
+    margin-bottom: 20px;
+}
+#pNumGame{
+    font-size: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+#spText{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.buttonBox{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+.princessSec{
+    border-radius: 30px 50px 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    background-color: aliceblue;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom: 10px;
+    margin: 10px;
+}
+.turnButton{
+    margin-bottom: 10px;
 }
