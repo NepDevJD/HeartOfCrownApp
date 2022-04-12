@@ -222,6 +222,7 @@ button {
   font-weight: 100;
   margin-top: 10px;
   margin-left: 4px;
+  pointer-events: none;
 }
 .pName {
   margin-bottom: 0;
@@ -231,6 +232,7 @@ button {
   margin-top: 5px;
   margin-left: 4px;
   text-align: left;
+  pointer-events: none;
 }
 .pBox {
   border: 4px solid #8ffffe;
@@ -241,10 +243,12 @@ button {
   justify-content: space-between;
   height: 10vh;
   background-color: azure;
+  z-index: 0;
 }
 .cardSmall {
   height: inherit;
   width: auto;
+  pointer-events: none;
 }
 .secCoin {
   border-radius:30px;
@@ -427,4 +431,26 @@ button {
 }
 .turnButton {
   margin-bottom: 10px;
+}
+.textBox{
+  pointer-events: none;
+}
+
+
+/* ANIMATIONS */
+@keyframes expand{
+  from{
+    height: 10vh;
+    }
+    to{
+      height: 400px;
+    }
+}
+@keyframes close{
+  from{
+    height: 400px;
+    }
+    to{
+      height: 10vh;
+    }
 }

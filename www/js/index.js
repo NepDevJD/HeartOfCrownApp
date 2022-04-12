@@ -28,7 +28,28 @@ function onDeviceReady() {
     document.getElementById('deviceready').classList.add('ready');
 } */
 
-/* window.onclick = e => {
-    console.log(e.target);  // to get the element
-    console.log(e.target.className);  // to get the element tag name alone
-}  */
+ window.onclick = e => {
+     console.log(e.target);  // to get the element
+    /* console.log(e.target.className);  // to get the element tag name alone */    
+    let numHit;
+    if (e.target.className == 'pBox'){
+        if (e.target.style.height != "400px"){ //expands princess selection to 400px tall, then displays more info about princess
+        numHit = e.target.id; //get id
+        console.log('pbox hits');
+        e.target.style.animation = "expand 600ms forwards";
+        e.target.style.height = "400px";
+        tname = e.target.className;
+    } 
+
+    else if (e.target.style.height == "400px"){ //closes expanded info
+
+        e.target.style.animation = "close 600ms forwards";
+        e.target.style.height = "10vh";
+            console.log( e.target.className + " works " + e.target.style.height)
+            
+        }
+        
+        
+    }
+}  
+
