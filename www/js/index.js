@@ -35,52 +35,7 @@ window.onclick = (e) => {
   /* console.log(e.target.className);  // to get the element tag name alone */
   //console.log(e.target.className);
 
-  //Next section will add or subtract succession points -- all point ids start with 7
-  if (e.target.id == 71) {
-    //add 1 point
-    pVal++;
-    document.getElementById("pNumGame").innerHTML = pVal;
-  } else if (e.target.id == 72) {
-    //add 2 points
-    pVal = pVal + 2;
-    document.getElementById("pNumGame").innerHTML = pVal;
-  } else if (e.target.id == 73) {
-    //add 3 points
-    pVal = pVal + 3;
-    document.getElementById("pNumGame").innerHTML = pVal;
-  } else if (e.target.id == 76) {
-    //add 6 points
-    pVal = pVal + 6;
-    document.getElementById("pNumGame").innerHTML = pVal;
-  } else if (e.target.id == 711) {
-    //subtract 1 point
-    pVal--;
-    document.getElementById("pNumGame").innerHTML = pVal;
-  } else if (e.target.id == 712) {
-    //subtract 2 points
-    pVal = pVal - 2;
-    document.getElementById("pNumGame").innerHTML = pVal;
-  }
-
-  //Next section will add coins -- all coin ids starrt with 8
-  if (e.target.id == 81) {
-    //add 1 point
-    cVal++;
-    document.getElementById("cNumTurn").innerHTML = cVal;
-  } else if (e.target.id == 82) {
-    //add 2 points
-    cVal = cVal + 2;
-    document.getElementById("cNumTurn").innerHTML = cVal;
-  } else if (e.target.id == 83) {
-    //add 3 points
-    cVal = cVal + 3;
-    document.getElementById("cNumTurn").innerHTML = cVal;
-  } else if (e.target.id == 800) {
-    //add 3 points
-    cVal = 0;
-    document.getElementById("cNumTurn").innerHTML = cVal;
-  }
-
+ 
   //next section for princessPage only
   if (document.URL.includes("princessPage.html")) {
     //make sure princess page is active page
@@ -101,6 +56,61 @@ window.onclick = (e) => {
       document.getElementById("111").style.display = "none";
       document.getElementById("bigInfo1").style.display = "none";
     }
-  } else {
+  } 
+  //next section for index only
+  else if (document.URL.includes("index.html")) { //make sure index is active page
+    //Next section will add or subtract succession points -- all point ids start with 7
+  if (e.target.id == 71) {
+    //add 1 point
+    pVal++;
+    document.getElementById("pNumGame").innerHTML = pVal;
+  } 
+  else if (e.target.id == 72) {
+    //add 2 points
+    pVal = pVal + 2;
+    document.getElementById("pNumGame").innerHTML = pVal;
+  } 
+  else if (e.target.id == 73) {
+    //add 3 points
+    pVal = pVal + 3;
+    document.getElementById("pNumGame").innerHTML = pVal;
+  } 
+  else if (e.target.id == 76) {
+    //add 6 points
+    pVal = pVal + 6;
+    document.getElementById("pNumGame").innerHTML = pVal;
+  } 
+  else if (e.target.id == 711) {
+    //subtract 1 point
+    pVal--;
+    document.getElementById("pNumGame").innerHTML = pVal;
+  } 
+  else if (e.target.id == 712) {
+    //subtract 2 points
+    pVal = pVal - 2;
+    document.getElementById("pNumGame").innerHTML = pVal;
+  }
+
+  //Next section will add coins -- all coin ids starrt with 8
+  if (e.target.id == 81) {
+    //add 1 coins
+    cVal++;
+    document.getElementById("cNumTurn").innerHTML = cVal;
+  } 
+  else if (e.target.id == 82) {
+    //add 2 coins
+    cVal = cVal + 2;
+    document.getElementById("cNumTurn").innerHTML = cVal;
+  } 
+  else if (e.target.id == 83) {
+    //add 3 coins
+    cVal = cVal + 3;
+    document.getElementById("cNumTurn").innerHTML = cVal;
+  } else if (e.target.id == 800) {
+    //reset coin count to zero
+    cVal = 0;
+    document.getElementById("cNumTurn").innerHTML = cVal;
+  }
+
   }
 };
