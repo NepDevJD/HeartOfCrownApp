@@ -28,15 +28,13 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'; style-src 'self'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light">
         <link rel="stylesheet" href="css/index.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Manrope:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;1,100;1,300&family=Smooch+Sans:wght@300;400;500;600&family=Sorts+Mill+Goudy:ital@1&family=Staatliches&display=swap" rel="stylesheet">
+        <script src="js\index.js"></script>
         <title>Heart of Crown Companion</title>
     </head>
         <div class="AppTop"> <!-- top bar with icons and hamburger memu --> 
@@ -53,20 +51,24 @@
             <div class="secPoints">
                 <div class="currPoints">
                 <h3 class="pText" id="spText">Succession Points:</h3>
-                <h4 class="pText" id="pNumGame">0</h4>
+                <h4 class="pText" id="pNumGame">
+                    <script>
+                        document.write(pVal);
+                    </script>
+                </h4>
                 </div>
                 <div class="pointButtons">
 
                     <div class="pButtons">
-                <button class="addP">+1</button>
-                <button class="addP">+2</button>
-                <button class="addP">+3</button>
-                <button class="addP">+6</button>
+                <button class="addP" id="71">+1</button>
+                <button class="addP" id="72">+2</button>
+                <button class="addP" id="73">+3</button>
+                <button class="addP" id="76">+6</button>
                     </div>
                     <div class="mButtons">
-                        <button class="minP">-1</button>
-                        <button class="minP">-2</button>
-                        <button class="cpB">Custom Amount</button>
+                        <button class="minP" id="711">-1</button>
+                        <button class="minP" id="712">-2</button>
+                        <button class="cpB" id="79">Custom Amount</button>
                     </div>
                 </div>
                 
@@ -89,18 +91,22 @@
             <div class="secCoin">
                 <div class="currCoin">
                 <h3 class="cText">Coins:</h3>
-                <h4 class="cText" id="cNumTurn">0</h4>
+                <h4 class="cText" id="cNumTurn">
+                    <script>
+                        document.write(cVal);
+                    </script>
+                </h4>
                 </div>
                 <div class="coinButtons">
                 <button class="ccB">Custom Amount</button>
-                <button class="addCN">+1</button>
-                <button class="addCN">+2</button>
-                <button class="addCN">+3</button>
+                <button class="addCN" id="81">+1</button>
+                <button class="addCN" id="82">+2</button>
+                <button class="addCN" id="83">+3</button>
                 </div>
                 
             </div>
             <div class="buttonBox">
-            <button class="turnButton">End Turn</button>
+            <button class="turnButton" id="800">End Turn</button>
             </div>
         </section>
         </div>

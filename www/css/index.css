@@ -41,6 +41,10 @@ body {
     env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
 
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content:space-evenly;
 }
 
 /* Portrait layout (default) */
@@ -111,7 +115,12 @@ body {
 
 @media screen and (prefers-color-scheme: dark) {
   body {
-    background-image: linear-gradient(to bottom, #585858 0%, #1b1b1b 51%);
+    background-color: white;
+  }
+}
+@media screen and (prefers-color-scheme: light) {
+  body {
+    background-color: white;
   }
 }
 
@@ -164,6 +173,13 @@ section {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+.secHeadP {
+  font-size: 4vh;
+  font-family: "Smooch Sans", sans-serif;
+  height: 40px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
 .secTopStuf {
   display: flex;
   flex-direction: row;
@@ -171,6 +187,15 @@ section {
   height: 40px;
   margin-left: 15px;
   margin-right: 15px;
+}
+.secTopStufP {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 40px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 4px;
 }
 .menuDots{
   height: 11px;
@@ -182,9 +207,22 @@ section {
   flex-direction: column;
   justify-content: space-evenly;
 }
+.pSectionsBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .botButtons {
   width: 100%;
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 5px;
+  padding-bottom: 2px;
+}
+.bpButtons {
+  width: 100%;
+  display: none;
   flex-direction: row;
   justify-content: space-evenly;
   padding-top: 5px;
@@ -207,12 +245,12 @@ button {
   border: 0px;
 }
 .pSelectBox {
-  margin-top: 70px;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-top: 65px;
+  height: 100%;
+  margin-bottom: 5px;
 }
 .pTitle {
   width: 65vw;
@@ -234,21 +272,87 @@ button {
   text-align: left;
   pointer-events: none;
 }
+.AB {
+  font-size: 4vh;
+  font-family: "Smooch Sans", sans-serif;
+  font-weight: bold;
+  margin-top: 5px;
+  text-align: left;
+  pointer-events: none;
+}
+.abText{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: none;
+  font-size: 16pt;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.aboutP{
+  font-size: 1.6vh;
+  margin: 0;
+}
 .pBox {
   border: 4px solid #8ffffe;
   border-radius: 30px 50px 50px 30px;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 10vh;
+  height: 11.6vh;
+  background: linear-gradient(to bottom, #ffffff 5%, azure 100%);
   background-color: azure;
-  z-index: 0;
+}
+#picPlus1{
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+.iText{
+  font-size: 9pt;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 3px;
+
+}
+.quote{
+  font-size: 11pt;
+  margin-right: 2px;
+  margin-left: 2px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+.pPlusStuff{
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: right;
+  background: linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+  background-color: #dfbdfa;
+  border-radius: 50px;
+}
+.aboutInfo{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .cardSmall {
   height: inherit;
   width: auto;
   pointer-events: none;
+  max-height: 100px;
+  max-width: 100px;
+}
+.picPlus{
+  height: inherit;
 }
 .secCoin {
   border-radius:30px;
@@ -434,8 +538,40 @@ button {
 }
 .textBox{
   pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
+.allAbout{
+  height: inherit;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
 
+}
+#bigInfo1{
+  height: inherit;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 0px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.pList{
+  list-style: none;
+  margin-left: 4px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+.li{
+}
+.closeB{
+  height: 25px;
+  padding: 10px;
+}
 
 /* ANIMATIONS */
 @keyframes expand{
@@ -443,14 +579,22 @@ button {
     height: 10vh;
     }
     to{
-      height: 400px;
+      height: 60vh;
     }
 }
 @keyframes close{
   from{
-    height: 400px;
+    height: 50vh;
     }
     to{
       height: 10vh;
     }
+}
+@keyframes cardFade{
+  from{
+    display: block;
+  }
+  to{
+    display: none;
+  }
 }
