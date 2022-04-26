@@ -29,7 +29,8 @@ body {
   -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
   -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
   -webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
-  background-color: #d2e6eb;
+  /* user-select: none; */
+  background-color: #ffffff;
 
   font-family: system-ui, -apple-system, -apple-system-font, "Segoe UI",
     "Roboto", sans-serif;
@@ -134,6 +135,7 @@ body {
   background-color: azure;
   flex-direction: row;
   justify-content: space-between;
+  z-index: 10; /* Ensures its always on top. without some princess info text would appear on top when scrolled */
 }
 .menuTxt {
   width: 60vw;
@@ -543,20 +545,21 @@ button {
   justify-content: space-around;
 }
 .allAbout{
+  opacity: 0;
   height: inherit;
   display: none;
   flex-direction: column;
   justify-content: space-between;
-
 }
-#bigInfo1{
-  height: inherit;
+#bigInfo1, #bigInfo2{
+  opacity: 0;
+  height: 100%;
   padding-left: 5px;
   padding-right: 5px;
   margin-top: 0px;
   display: none;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
 }
 .pList{
@@ -566,20 +569,21 @@ button {
   margin-bottom: 10px;
   padding: 0;
 }
-.li{
-}
 .closeB{
   height: 25px;
   padding: 10px;
+}
+.backPButton{
+  width: 100%;
 }
 
 /* ANIMATIONS */
 @keyframes expand{
   from{
-    height: 10vh;
+    height: 11.6vh;
     }
     to{
-      height: 60vh;
+      height: 66vh;
     }
 }
 @keyframes close{
@@ -587,14 +591,16 @@ button {
     height: 50vh;
     }
     to{
-      height: 10vh;
+      height: 11.6vh;
     }
 }
 @keyframes cardFade{
   from{
-    display: block;
+    opacity: 0;
+    display: none;
   }
   to{
-    display: none;
+    opacity: 1;
+    display: flex;
   }
 }

@@ -35,26 +35,49 @@ window.onclick = (e) => {
   /* console.log(e.target.className);  // to get the element tag name alone */
   //console.log(e.target.className);
 
- 
   //next section for princessPage only
   if (document.URL.includes("princessPage.html")) {
     //make sure princess page is active page
     if (e.target.id == 1 || e.target.id == 11 || e.target.id == 111) {
-      if (document.getElementById("1").style.height != "60vh") {
+      if (document.getElementById("1").style.height != "66vh") {
         //check height
         //expands princess 1 selection to 400px tall, then displays more info about princess 1
         document.getElementById("1").style.animation = "expand 600ms forwards";
-        document.getElementById("1").style.height = "60vh";
-        tname = e.target.className;
+        document.getElementById("1").style.height = "66vh";
+        document.getElementById("TB1").style.pointerEvents = "auto";
+        document.getElementById("111").style.animation = "cardFade 1000ms forwards"; //fades in info
         document.getElementById("111").style.display = "flex";
-        document.getElementById("bigInfo1").style.display = "block";
+        document.getElementById("bigInfo1").style.animation = "cardFade 1000ms forwards"; //fades in info
+        document.getElementById("bigInfo1").style.display = "flex";
       }
-    } else {
+    } else if (document.getElementById("1").style.height === "66vh") {
       //close if expanded
       document.getElementById("1").style.animation = "close 600ms forwards";
       document.getElementById("1").style.height = "1.6vh";
       document.getElementById("111").style.display = "none";
       document.getElementById("bigInfo1").style.display = "none";
+      document.getElementById("TB1").style.pointerEvents = "none";
+    }
+
+    if (e.target.id == 2 || e.target.id == 22 || e.target.id == 222) {
+      if (document.getElementById("2").style.height != "66vh") {
+        //check height
+        //expands princess 1 selection to 400px tall, then displays more info about princess 1
+        document.getElementById("2").style.animation = "expand 600ms forwards";
+        document.getElementById("2").style.height = "66vh";
+        document.getElementById("TB2").style.pointerEvents = "auto";
+        document.getElementById("222").style.animation = "cardFade 1000ms forwards"; //fades in info
+        document.getElementById("222").style.display = "flex";
+        document.getElementById("bigInfo2").style.animation = "cardFade 1000ms forwards"; //fades in info
+        document.getElementById("bigInfo2").style.display = "flex";
+      }
+    } else if (document.getElementById("2").style.height === "66vh") {
+      //close if expanded
+      document.getElementById("2").style.animation = "close 600ms forwards";
+      document.getElementById("2").style.height = "1.6vh";
+      document.getElementById("222").style.display = "none";
+      document.getElementById("bigInfo2").style.display = "none";
+      document.getElementById("TB2").style.pointerEvents = "none";
     }
   } 
   //next section for index only
