@@ -29,7 +29,7 @@ body {
   -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
   -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
   -webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
-  /* user-select: none; */
+  user-select: none;
   background-color: #ffffff;
 
   font-family: system-ui, -apple-system, -apple-system-font, "Segoe UI",
@@ -403,7 +403,7 @@ button {
   margin-left: 5px;
   margin-top: 9px;
 }
-.menuClose{
+.menuClose {
   height: 30px;
   padding-top: 10px;
 }
@@ -419,24 +419,24 @@ button {
   margin: 10px;
   height: 26vh;
 }
-#secMore{
+#secMore {
   height: 0px;
   width: 100vw;
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  background-color: aliceblue;
-  padding-top: 8vh;
+  background-color: azure;
+
   padding-bottom: 10px;
   margin-left: 0px;
   margin-right: 0px;
 }
-.abtInfo{
+.abtInfo {
   text-align: center;
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.resetB{
+.resetB {
   background: black;
   color: red;
 }
@@ -613,30 +613,30 @@ button {
   width: 60vw;
   display: block;
 }
-.cardFullImg{
+.cardFullImg {
   margin-right: 10px;
   height: 16vh;
   border-radius: 15px;
 }
-.bpInfo{
+.bpInfo {
   display: none;
   flex-direction: row;
   justify-content: space-between;
   padding: 4px;
 }
-.backedText{
+.backedText {
   display: flex;
   flex-direction: column;
   justify-content: top;
 }
-.backedTitle{
+.backedTitle {
   font-size: 3vh;
   margin-top: 0;
   margin-bottom: 0;
   margin-right: 13px;
   text-align: Left;
 }
-.backedName{
+.backedName {
   font-size: 4vh;
   margin-top: 0;
   margin-bottom: 2px;
@@ -740,9 +740,29 @@ button {
     padding-top: 8.2vh;
   }
 }
-@keyframes gone{
-  from {display: block;}
-  to {display: none;}
+@keyframes exPad {
+  from {
+    padding-top: 0vh;
+  }
+  to {
+    padding-top: 8vh;
+  }
+}
+@keyframes clPad {
+  from {
+    padding-top: 8vh;
+  }
+  to {
+    padding-top: 0vh;
+  }
+}
+@keyframes gone {
+  from {
+    display: block;
+  }
+  to {
+    display: none;
+  }
 }
 @keyframes cardFade {
   from {
@@ -764,4 +784,3 @@ button {
     display: none;
   }
 }
-

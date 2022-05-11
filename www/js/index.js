@@ -61,7 +61,6 @@ window.onclick = (e) => {
       document.getElementById("TB1").style.pointerEvents = "none";
     }
 
-
     if (e.target.id == 2 || e.target.id == 22 || e.target.id == 222) {
       if (document.getElementById("2").style.height != "66vh") {
         //check height
@@ -178,23 +177,28 @@ window.onclick = (e) => {
     }
   }
 
-
   //next section for index only
   else if (document.URL.includes("index.html")) {
     //make sure index is active page
     if (e.target.id == 91) {
-      console.log("dotsclickeed")
-      document.getElementById("secMore").style.animation = "expand7 600ms forwards";
+      console.log("dotsclickeed");
+      document.getElementById("secMore").style.animation =
+        "expand7 600ms forwards";
       document.getElementById("secMore").style.display = "flex";
-      document.getElementById("spText").style.animation = "cardFade 200ms forwards"; 
-    }
-    else if (e.target.id == 92){
-      document.getElementById("secMore").style.animation = "close7 600ms forwards";
-      setTimeout(() => { document.getElementById("secMore").style.display = "none"; }, 600);
+      document.getElementById("spText").style.animation =
+        "cardFade 200ms forwards";
+      document.getElementById("secMore").style.paddingTop = "10vh";
+    } else if (e.target.id == 92) {
+      document.getElementById("secMore").style.animation =
+        "close7 600ms forwards";
+      setTimeout(() => {
+        document.getElementById("secMore").style.display = "none";
+      }, 600);
+      document.getElementById("secMore").style.paddingTop = "0vh";
       document.getElementById("secMore").style.height = "0px";
-      document.getElementById("spText").style.animation = "cardFadeR 599ms forwards"; 
-    }
-    else if (e.target.id == 991){
+      document.getElementById("spText").style.animation =
+        "cardFadeR 599ms forwards";
+    } else if (e.target.id == 991) {
       localStorage.setItem("isPBacked", "no");
       document.getElementById("buttonBoxP").style.display = "flex";
       pVal = 0;
@@ -202,22 +206,28 @@ window.onclick = (e) => {
       cVal = 0;
       document.getElementById("cNumTurn").innerHTML = cVal;
       document.getElementById("1Backed").style.display = "none";
-    }
-    else if (e.target.id == 992){
+      document.getElementById("2Backed").style.display = "none";
+      document.getElementById("3Backed").style.display = "none";
+      document.getElementById("4Backed").style.display = "none";
+      document.getElementById("5Backed").style.display = "none";
+      document.getElementById("buttonBoxP").style.display = "flex";
+    } else if (e.target.id == 992) {
       pVal = 0;
       document.getElementById("pNumGame").innerHTML = pVal;
-    }
-    else if (e.target.id == 993){
+    } else if (e.target.id == 993) {
       localStorage.setItem("isPBacked", "no");
       document.getElementById("buttonBoxP").style.display = "flex";
       document.getElementById("1Backed").style.display = "none";
+      document.getElementById("2Backed").style.display = "none";
+      document.getElementById("3Backed").style.display = "none";
+      document.getElementById("4Backed").style.display = "none";
+      document.getElementById("5Backed").style.display = "none";
     }
     //Next section will add or subtract succession points -- all point ids start with 7
     if (e.target.id == 71) {
       //add 1 point
       pVal++;
       document.getElementById("pNumGame").innerHTML = pVal;
-      
     } else if (e.target.id == 72) {
       //add 2 points
       pVal = pVal + 2;
@@ -239,11 +249,22 @@ window.onclick = (e) => {
       pVal = pVal - 2;
       document.getElementById("pNumGame").innerHTML = pVal;
     } else if (e.target.id == 79) {
-    //enter custom val
-    pVal = pVal - 2;
-    document.getElementById("pNumGame").innerHTML = pVal;
-  }
-    
+      //enter custom val
+      let pointVal = parseInt(prompt("Enter Your Current Number of Points:"));
+      if (pointVal == 9001) {
+        //easter egg
+        var audio = document.getElementById("9k");
+        audio.play();
+      }
+      if (pointVal == 1337) {
+        alert("HACKER MODE ACTIVATED!");
+      } else if (isNaN(pointVal)) {
+        alert("Nice try, but that's not a number.");
+        pointVal = pVal;
+      }
+      pVal = pointVal;
+      document.getElementById("pNumGame").innerHTML = pVal;
+    }
 
     //Next section will add coins -- all coin ids starrt with 8
     if (e.target.id == 81) {
@@ -262,35 +283,80 @@ window.onclick = (e) => {
       //reset coin count to zero
       cVal = 0;
       document.getElementById("cNumTurn").innerHTML = cVal;
+    } else if (e.target.id == 89) {
+      //enter custom val
+      let coinVal = parseInt(prompt("Enter Your Current Number of Coinss:"));
+      if (isNaN(coinVal)) {
+        alert("Nice try, but that's not a number.");
+        coinVal = cVal;
+      }
+      cVal = coinVal;
+      document.getElementById("cNumTurn").innerHTML = cVal;
     }
   }
 };
-
-function p1Backed(){
+function p1Backed() {
   localStorage.setItem("isPBacked", "Yes");
   localStorage.setItem("BackedP", "1");
+  alert("Lulunasaika Backed! You gained 6 Succession Points!");
+}
 
-};
-function moreMenu(){
-  
-};
+function p2Backed() {
+  localStorage.setItem("isPBacked", "Yes");
+  localStorage.setItem("BackedP", "2");
+  alert("Laolily Backed! Please Acquire up to 5 maids from the market.");
+}
 
-function checkOnLoad(){
-let isPrinBacked = localStorage.getItem("isPBacked");
-let backedPrin = localStorage.getItem("BackedP");
-console.log(isPrinBacked);
-if (isPrinBacked == "Yes") {
-  document.getElementById("buttonBoxP").style.display = "none";
-  if(backedPrin == "1"){
-    document.getElementById("1Backed").style.display = "flex";
-    pVal = pVal+6;
-    document.getElementById("pNumGame").innerHTML = pVal;
+function p3Backed() {
+  localStorage.setItem("isPBacked", "Yes");
+  localStorage.setItem("BackedP", "3");
+  alert(
+    "Klam-Klam Backed! Cost to ards from the market has been reduced by 1."
+  );
+}
+
+function p4Backed() {
+  localStorage.setItem("isPBacked", "Yes");
+  localStorage.setItem("BackedP", "4");
+  alert("Bergamotte Backed! Active her ability to your hearts desire.");
+}
+
+function p5Backed() {
+  localStorage.setItem("isPBacked", "Yes");
+  localStorage.setItem("BackedP", "5");
+  alert(
+    "Flammaria Backed! Aquire 2 cards with a cost of 6 or less. Don't move any farming villages into your domain."
+  );
+}
+
+function p6Backed() {
+  localStorage.setItem("isPBacked", "Yes");
+  localStorage.setItem("BackedP", "6");
+  alert(
+    "Lain and Shion Backed! Twin Power! Twin counters will be added to the app in a future update."
+  );
+}
+
+function checkOnLoad() {
+  let isPrinBacked = localStorage.getItem("isPBacked");
+  let backedPrin = localStorage.getItem("BackedP");
+  console.log(isPrinBacked);
+  if (isPrinBacked == "Yes") {
+    document.getElementById("buttonBoxP").style.display = "none";
+    if (backedPrin == "1") {
+      document.getElementById("1Backed").style.display = "flex";
+      pVal = pVal + 6;
+      document.getElementById("pNumGame").innerHTML = pVal;
+    } else if (backedPrin == "2") {
+      document.getElementById("2Backed").style.display = "flex";
+    } else if (backedPrin == "3") {
+      document.getElementById("3Backed").style.display = "flex";
+    } else if (backedPrin == "4") {
+      document.getElementById("4Backed").style.display = "flex";
+    } else if (backedPrin == "5") {
+      document.getElementById("5Backed").style.display = "flex";
+    } else if (backedPrin == "6") {
+      document.getElementById("6Backed").style.display = "flex";
+    }
   }
 }
-};
-
-
-
-
-
-
