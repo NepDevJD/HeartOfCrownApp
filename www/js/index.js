@@ -41,7 +41,7 @@ window.onclick = (e) => {
     if (e.target.id == 1 || e.target.id == 11 || e.target.id == 111) {
       if (document.getElementById("1").style.height != "66vh") {
         //check height
-        //expands princess 1 selection to 400px tall, then displays more info about princess 1
+        //expands p1 info
         document.getElementById("1").style.animation = "expand 600ms forwards";
         document.getElementById("1").style.height = "66vh";
         document.getElementById("TB1").style.pointerEvents = "auto";
@@ -64,7 +64,7 @@ window.onclick = (e) => {
     if (e.target.id == 2 || e.target.id == 22 || e.target.id == 222) {
       if (document.getElementById("2").style.height != "66vh") {
         //check height
-        //expands princess 2 selection to 400px tall, then displays more info about princess 1
+        //expnd p2info
         document.getElementById("2").style.animation = "expand 600ms forwards";
         document.getElementById("2").style.height = "66vh";
         document.getElementById("TB2").style.pointerEvents = "auto";
@@ -87,7 +87,7 @@ window.onclick = (e) => {
     if (e.target.id == 3 || e.target.id == 33 || e.target.id == 333) {
       if (document.getElementById("3").style.height != "66vh") {
         //check height
-        //expands princess 3 selection to 400px tall, then displays more info about princess 1
+        //expand p3 info
         document.getElementById("3").style.animation = "expand 600ms forwards";
         document.getElementById("3").style.height = "66vh";
         document.getElementById("TB3").style.pointerEvents = "auto";
@@ -110,7 +110,7 @@ window.onclick = (e) => {
     if (e.target.id == 4 || e.target.id == 44 || e.target.id == 444) {
       if (document.getElementById("4").style.height != "90vh") {
         //check height
-        //expands princess 4 selection to 400px tall, then displays more info about princess 1
+        //expand p4 info
         document.getElementById("4").style.animation = "expand4 600ms forwards";
         document.getElementById("4").style.height = "90vh";
         document.getElementById("TB4").style.pointerEvents = "auto";
@@ -133,7 +133,7 @@ window.onclick = (e) => {
     if (e.target.id == 5 || e.target.id == 55 || e.target.id == 555) {
       if (document.getElementById("5").style.height != "85vh") {
         //check height
-        //expands princess 5 selection to 400px tall, then displays more info about princess 1
+        //expand p5 info
         document.getElementById("5").style.animation = "expand5 600ms forwards";
         document.getElementById("5").style.height = "85vh";
         document.getElementById("TB5").style.pointerEvents = "auto";
@@ -156,7 +156,7 @@ window.onclick = (e) => {
     if (e.target.id == 6 || e.target.id == 66 || e.target.id == 666) {
       if (document.getElementById("6").style.height != "100vh") {
         //check height
-        //expands princess 6 selection to 400px tall, then displays more info about princess 1
+        //expand p6 info
         document.getElementById("6").style.animation = "expand6 600ms forwards";
         document.getElementById("6").style.height = "100vh";
         document.getElementById("TB6").style.pointerEvents = "auto";
@@ -180,15 +180,14 @@ window.onclick = (e) => {
   //next section for index only
   else if (document.URL.includes("index.html")) {
     //make sure index is active page
-    if (e.target.id == 91) {
-      console.log("dotsclickeed");
+    if (e.target.id == 91) { //opens hamburger menu
       document.getElementById("secMore").style.animation =
         "expand7 600ms forwards";
       document.getElementById("secMore").style.display = "flex";
       document.getElementById("spText").style.animation =
         "cardFade 200ms forwards";
       document.getElementById("secMore").style.paddingTop = "10vh";
-    } else if (e.target.id == 92) {
+    } else if (e.target.id == 92) { //closes menu
       document.getElementById("secMore").style.animation =
         "close7 600ms forwards";
       setTimeout(() => {
@@ -198,7 +197,7 @@ window.onclick = (e) => {
       document.getElementById("secMore").style.height = "0px";
       document.getElementById("spText").style.animation =
         "cardFadeR 599ms forwards";
-    } else if (e.target.id == 991) {
+    } else if (e.target.id == 991) { //resets app.
       localStorage.setItem("isPBacked", "no");
       document.getElementById("buttonBoxP").style.display = "flex";
       pVal = 0;
@@ -211,10 +210,10 @@ window.onclick = (e) => {
       document.getElementById("4Backed").style.display = "none";
       document.getElementById("5Backed").style.display = "none";
       document.getElementById("buttonBoxP").style.display = "flex";
-    } else if (e.target.id == 992) {
+    } else if (e.target.id == 992) { //resets points to 0
       pVal = 0;
       document.getElementById("pNumGame").innerHTML = pVal;
-    } else if (e.target.id == 993) {
+    } else if (e.target.id == 993) { //resets princess section. Removes Princess if backed and restores button.
       localStorage.setItem("isPBacked", "no");
       document.getElementById("buttonBoxP").style.display = "flex";
       document.getElementById("1Backed").style.display = "none";
@@ -255,12 +254,9 @@ window.onclick = (e) => {
         //easter egg
         var audio = document.getElementById("9k");
         audio.play();
-      }
-      if (pointVal == 1337) {
-        alert("HACKER MODE ACTIVATED!");
-      } else if (isNaN(pointVal)) {
+      } else if (isNaN(pointVal)) { //check if number
         alert("Nice try, but that's not a number.");
-        pointVal = pVal;
+        pointVal = pVal; //reverts pVal. It will display NaN without this
       }
       pVal = pointVal;
       document.getElementById("pNumGame").innerHTML = pVal;
@@ -285,16 +281,18 @@ window.onclick = (e) => {
       document.getElementById("cNumTurn").innerHTML = cVal;
     } else if (e.target.id == 89) {
       //enter custom val
-      let coinVal = parseInt(prompt("Enter Your Current Number of Coinss:"));
-      if (isNaN(coinVal)) {
+      let coinVal = parseInt(prompt("Enter Your Current Number of Coinss:")); //prompt to enter custom amount
+      if (isNaN(coinVal)) { //check if number
         alert("Nice try, but that's not a number.");
-        coinVal = cVal;
+        coinVal = cVal; //reverts cVal. It will display NaN without this
       }
       cVal = coinVal;
       document.getElementById("cNumTurn").innerHTML = cVal;
     }
   }
 };
+
+// functions when you select a princess to back. Adds selection to local storage and pops up message
 function p1Backed() {
   localStorage.setItem("isPBacked", "Yes");
   localStorage.setItem("BackedP", "1");
@@ -337,25 +335,25 @@ function p6Backed() {
   );
 }
 
-function checkOnLoad() {
+function checkOnLoad() { //ensures selected princess displays on index page.
   let isPrinBacked = localStorage.getItem("isPBacked");
   let backedPrin = localStorage.getItem("BackedP");
   console.log(isPrinBacked);
-  if (isPrinBacked == "Yes") {
-    document.getElementById("buttonBoxP").style.display = "none";
-    if (backedPrin == "1") {
+  if (isPrinBacked == "Yes") { //check if you have backed a princess
+    document.getElementById("buttonBoxP").style.display = "none"; //disables back a princess button
+    if (backedPrin == "1") { //displays princess 1
       document.getElementById("1Backed").style.display = "flex";
-      pVal = pVal + 6;
+      pVal = pVal + 6; //you gain 6 points when backing p1. adds 6 points to pval. 
       document.getElementById("pNumGame").innerHTML = pVal;
-    } else if (backedPrin == "2") {
+    } else if (backedPrin == "2") {//displays princess 2
       document.getElementById("2Backed").style.display = "flex";
-    } else if (backedPrin == "3") {
+    } else if (backedPrin == "3") {//displays princess 3
       document.getElementById("3Backed").style.display = "flex";
-    } else if (backedPrin == "4") {
+    } else if (backedPrin == "4") {//displays princess 4
       document.getElementById("4Backed").style.display = "flex";
-    } else if (backedPrin == "5") {
+    } else if (backedPrin == "5") {//displays princess 5
       document.getElementById("5Backed").style.display = "flex";
-    } else if (backedPrin == "6") {
+    } else if (backedPrin == "6") {//displays princess 6
       document.getElementById("6Backed").style.display = "flex";
     }
   }
