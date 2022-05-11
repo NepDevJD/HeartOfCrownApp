@@ -18,6 +18,12 @@
   "cordova": {
     "platforms": [
       "android"
-    ]
+    ],
+    "plugins": {
+      "cordova-plugin-context-menu": {}
+    }
+  },
+  "dependencies": {
+    "cordova-plugin-context-menu": "0.1.1"
   }
 }

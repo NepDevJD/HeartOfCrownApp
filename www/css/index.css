@@ -45,7 +45,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
 }
 
 /* Portrait layout (default) */
@@ -131,7 +131,7 @@ body {
   left: 0px;
   width: 100vw;
   display: flex;
-  height: 60px;
+  height: 8vh;
   background-color: azure;
   flex-direction: row;
   justify-content: space-between;
@@ -161,9 +161,9 @@ section {
   justify-content: space-between;
   margin-bottom: 5px;
 }
-.gameSection {
-  margin-top: 64px;
-  height: 59vh;
+#gameSection {
+  padding-top: 8.2vh;
+  height: 57vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -199,12 +199,12 @@ section {
   margin-right: 15px;
   margin-bottom: 4px;
 }
-.menuDots{
+.menuDots {
   height: 11px;
   padding-top: 13px;
 }
 .sectionsBox {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -233,7 +233,6 @@ section {
 button {
   width: 60vw;
   height: 40px;
-
   font-family: "Smooch Sans", sans-serif;
   background: linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
   background-color: #dfbdfa;
@@ -282,19 +281,18 @@ button {
   text-align: left;
   pointer-events: none;
 }
-.abText{
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 16px;
+.abText {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2.39vh;
   font-style: normal;
   font-weight: bold;
   text-decoration: none;
   text-transform: none;
-  font-size: 16pt;
   margin-bottom: 5px;
   margin-top: 5px;
 }
-.aboutP{
-  font-size: 1.6vh;
+.aboutP {
+  font-size: 1.7vh;
   margin: 0;
 }
 .pBox {
@@ -308,23 +306,22 @@ button {
   background: linear-gradient(to bottom, #ffffff 5%, azure 100%);
   background-color: azure;
 }
-#picPlus1{
+#picPlus1 {
   height: inherit;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: right;
 }
-.iText{
+.iText {
   font-size: 9pt;
   margin-right: 10px;
   margin-left: 10px;
   text-align: left;
   margin-top: 0;
   margin-bottom: 3px;
-
 }
-.quote{
+.quote {
   font-size: 11pt;
   margin-right: 2px;
   margin-left: 2px;
@@ -332,7 +329,7 @@ button {
   margin-bottom: 0;
   text-align: center;
 }
-.pPlusStuff{
+.pPlusStuff {
   height: inherit;
   display: flex;
   flex-direction: column;
@@ -342,7 +339,7 @@ button {
   background-color: #dfbdfa;
   border-radius: 50px;
 }
-.aboutInfo{
+.aboutInfo {
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -353,11 +350,11 @@ button {
   max-height: 100px;
   max-width: 100px;
 }
-.picPlus{
+.picPlus {
   height: inherit;
 }
 .secCoin {
-  border-radius:30px;
+  border-radius: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -381,10 +378,11 @@ button {
   text-shadow: 0px 1px 0px #ded17c;
   height: 7vh;
   width: 50px;
-  
+
   padding: 0;
 }
-.coinButtons{
+
+.coinButtons {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -405,7 +403,10 @@ button {
   margin-left: 5px;
   margin-top: 9px;
 }
-
+.menuClose{
+  height: 30px;
+  padding-top: 10px;
+}
 .secPoints {
   border-radius: 30px 50px 50px 30px;
   display: flex;
@@ -416,6 +417,28 @@ button {
   padding-right: 10px;
   padding-bottom: 10px;
   margin: 10px;
+  height: 26vh;
+}
+#secMore{
+  height: 0px;
+  width: 100vw;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: aliceblue;
+  padding-top: 8vh;
+  padding-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.abtInfo{
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.resetB{
+  background: black;
+  color: red;
 }
 .addP {
   box-shadow: inset 0px 1px 0px 0px #f9eca0;
@@ -477,7 +500,7 @@ button {
   padding: 0px;
   text-decoration: none;
   width: 140px;
-  height:  7vh;
+  height: 7vh;
 }
 .pButtons {
   display: flex;
@@ -504,7 +527,7 @@ button {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3vh;
   margin-top: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 #pNumGame {
   font-size: 4vh;
@@ -523,35 +546,49 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 2px;
+}
+#buttonBoxP {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2px;
+  margin-bottom: 10px;
 }
 .princessSec {
+  height: 28vh;
   border-radius: 30px 50px 50px 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: aliceblue;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
   margin: 10px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 3px;
 }
 .turnButton {
   margin-bottom: 10px;
 }
-.textBox{
+.textBox {
   pointer-events: none;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.allAbout{
+.allAbout {
   opacity: 0;
   height: inherit;
   display: none;
   flex-direction: column;
   justify-content: space-between;
 }
-#bigInfo1, #bigInfo2{
+#bigInfo1,
+#bigInfo2,
+#bigInfo3,
+#bigInfo4,
+#bigInfo5,
+#bigInfo6 {
   opacity: 0;
   height: 100%;
   padding-left: 5px;
@@ -560,47 +597,171 @@ button {
   display: none;
   flex-direction: column;
   justify-content: space-evenly;
-
 }
-.pList{
+.pList {
   list-style: none;
   margin-left: 4px;
   margin-top: 5px;
   margin-bottom: 10px;
   padding: 0;
 }
-.closeB{
+.closeB {
   height: 25px;
   padding: 10px;
 }
-.backPButton{
-  width: 100%;
+#backPButton {
+  width: 60vw;
+  display: block;
 }
-
+.cardFullImg{
+  margin-right: 10px;
+  height: 16vh;
+  border-radius: 15px;
+}
+.bpInfo{
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4px;
+}
+.backedText{
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+}
+.backedTitle{
+  font-size: 3vh;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 13px;
+  text-align: Left;
+}
+.backedName{
+  font-size: 4vh;
+  margin-top: 0;
+  margin-bottom: 2px;
+  margin-right: 13px;
+  text-align: Left;
+}
 /* ANIMATIONS */
-@keyframes expand{
-  from{
+@keyframes expand {
+  from {
     height: 11.6vh;
-    }
-    to{
-      height: 66vh;
-    }
+  }
+  to {
+    height: 66vh;
+  }
 }
-@keyframes close{
-  from{
-    height: 50vh;
-    }
-    to{
-      height: 11.6vh;
-    }
+@keyframes close {
+  from {
+    height: 66vh;
+  }
+  to {
+    height: 11.6vh;
+  }
 }
-@keyframes cardFade{
-  from{
+@keyframes expand4 {
+  from {
+    height: 11.6vh;
+  }
+  to {
+    height: 90vh;
+  }
+}
+@keyframes close4 {
+  from {
+    height: 90vh;
+  }
+  to {
+    height: 11.6vh;
+  }
+}
+@keyframes expand5 {
+  from {
+    height: 11.6vh;
+  }
+  to {
+    height: 85vh;
+  }
+}
+@keyframes close5 {
+  from {
+    height: 85vh;
+  }
+  to {
+    height: 11.6vh;
+  }
+}
+@keyframes expand6 {
+  from {
+    height: 11.6vh;
+  }
+  to {
+    height: 100vh;
+  }
+}
+@keyframes close6 {
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 11.6vh;
+  }
+}
+@keyframes expand7 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 350px;
+  }
+}
+@keyframes close7 {
+  from {
+    height: 350px;
+  }
+  to {
+    height: 0px;
+  }
+}
+@keyframes expand8 {
+  from {
+    padding-top: 8.2vh;
+  }
+  to {
+    padding-top: 18.2vh;
+  }
+}
+@keyframes close8 {
+  from {
+    padding-top: 18.2vh;
+  }
+  to {
+    padding-top: 8.2vh;
+  }
+}
+@keyframes gone{
+  from {display: block;}
+  to {display: none;}
+}
+@keyframes cardFade {
+  from {
     opacity: 0;
     display: none;
   }
-  to{
+  to {
     opacity: 1;
     display: flex;
   }
 }
+@keyframes cardFadeR {
+  from {
+    opacity: 1;
+    display: flex;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+

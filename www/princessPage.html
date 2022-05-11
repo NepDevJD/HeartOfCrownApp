@@ -52,6 +52,7 @@
       <img class="MenuIcon" src="img\App IconFULL.png" />
     </div>
 
+    {# Princess IDs are coded 1-6 p1 IDs use 1, P2 uses 2, etc #}
     <div class="pSectionsBox">
       <div class="pSelectBox">
         <div class="secTopStufP">
@@ -81,7 +82,7 @@
               </p>
               <div class="bpbuttons">
                 <form>
-                  <button formaction="index.html" class="backPButton" id="1111">
+                  <button formaction="index.html" class="backPButton" id="1111" onclick="p1Backed()">
                     Back Lulunasaika
                   </button>
                 </form>
@@ -115,10 +116,19 @@
             </div>
             <div id="bigInfo2">
               <p class="aboutP">
-                Former emporer Hellard's second child; her mother was the imperial noble Ririka Asford, Hellard's second cousin. Still a child, and only the second inheritor, she's still supported by the nobles as being the child of a high noble empire, and many send their daughters to the capitral to be Laol;ily's handmaid. She was raised away from her sister Lulunasaika, and she didn't know of her until recently. Butbeing the fearless child that she is, Laolily quickly came to like her, and is now very fond of her older sister,
+                Former emporer Hellard's second child; her mother was the
+                imperial noble Ririka Asford, Hellard's second cousin. Still a
+                child, and only the second inheritor, she's still supported by
+                the nobles as being the child of a high noble empire, and many
+                send their daughters to the capitral to be Laol;ily's handmaid.
+                She was raised away from her sister Lulunasaika, and she didn't
+                know of her until recently. Butbeing the fearless child that she
+                is, Laolily quickly came to like her, and is now very fond of
+                her older sister,
               </p>
               <p class="abText">
-                When you back Loalily the Second Imperial Princess, acquire up to 5 Royal Maids from the Market.
+                When you back Loalily the Second Imperial Princess, acquire up
+                to 5 Royal Maids from the Market.
               </p>
               <div class="bpbuttons">
                 <form>
@@ -140,7 +150,9 @@
                 <p class="iText">Favorite Snack: <br />Chocolate</p>
               </div>
 
-              <p class="quote">"Hm... Wouldn't  it be better if Lulu did this?"</p>
+              <p class="quote">
+                "Hm... Wouldn't it be better if Lulu did this?"
+              </p>
               <div class="cButton">
                 <img class="closeB" src="img\close.png" />
               </div>
@@ -148,67 +160,216 @@
           </div>
         </section>
 
-
-
         <section class="pBox" id="3">
-          <div class="textBox">
-            <h1 class="pTitle">South Sea Princess</h1>
-            <h1 class="pName">Klam-Klam</h1>
-            <div id="p3" class="allAbout">
-              <ul class="pList">
-                <li>Home:</li>
-                <li>Age</li>
-                <li>Home:</li>
-                <li>Home:</li>
-              </ul>
+          <div class="textBox" id="TB3">
+            <div class="NT">
+              <h1 class="pTitle">South Sea Princess</h1>
+              <h1 class="pName">Klam-Klam</h1>
+            </div>
+            <div id="bigInfo3">
+              <p class="aboutP">
+                Klam-Klam is the second cousin-in-law to the former emperor
+                Hellard. The Firone family is a huge trading family, and with
+                their support, she is a strong candidate for the throne.
+                Klam-Klam is a trusted tradeswoman with many shops under her
+                command. Since making money is also her personal hobby, her
+                spirit at work is high and efficient. Not only is Klam-Klam
+                close in age to Bergamotte, but she is also a good business
+                partner, they have been good friends for quite some time.
+              </p>
+              <p class="abText">
+                Your cost to buy a card is reduced by one. This cannot reduce
+                the cost of the card to zero or less.
+              </p>
+              <div class="bpbuttons">
+                <form>
+                  <button formaction="index.html" class="backPButton" id="3333">
+                    Back Klam-Klam
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
-          <img class="cardSmall" src="img\P3C.png" />
+          <div class="pPlusStuff" id="33">
+            <img class="cardSmall" src="img\P3C.png" />
+
+            <div id="333" class="allAbout">
+              <div class="aboutInfo">
+                <p class="iText">Age: 16</p>
+                <p class="iText">Home: <br />Trade City Faithon</p>
+                <p class="iText">Hobby: <br />Money Making</p>
+                <p class="iText">Favorite Snack: <br />Mowmow nuts</p>
+              </div>
+
+              <p class="quote">
+                "If you can't buy it for money, that means it's for free!"
+              </p>
+              <div class="cButton">
+                <img class="closeB" src="img\close.png" />
+              </div>
+            </div>
+          </div>
         </section>
+
         <section class="pBox" id="4">
-          <div class="textBox">
-            <h1 class="pTitle">Scholar Princess</h1>
-            <h1 class="pName">Bergamotte</h1>
-            <div id="p4" class="allAbout">
-              <ul class="pList">
-                <li>Home:</li>
-                <li>Age</li>
-                <li>Home:</li>
-                <li>Home:</li>
-              </ul>
+          <div class="textBox" id="TB4">
+            <div class="NT">
+              <h1 class="pTitle">Scholar Princess</h1>
+              <h1 class="pName">Bergamotte</h1>
+            </div>
+            <div id="bigInfo4">
+              <p class="aboutP">
+                The only daughter of the Friesberg family, one of the empire's
+                dukes and a relative of Hellard's. She is extremely
+                knowledgeable and intelligent, and graduated from the Imperial
+                Research Institute, the Empire's finest school in alchemy, with
+                top scores, and instantly became an assistant professor; a true
+                genius if the world ever saw one. Bergamotte seems to have spent
+                most of her days buried in reasearch about alchemy, but has
+                become a candidate for the throne with the Friesberg family's
+                support. She let people know that, should she ascend, she'll
+                double the Institute's funds.
+              </p>
+              <p class="abText">
+                [Activation Ability] (Discard a non-Curse card from your hand):
+                Take an action card from your discard pile and put it in your
+                hand. you can use this ability once during the Main Phase of
+                each of your turns.
+              </p>
+              <div class="bpbuttons">
+                <form>
+                  <button formaction="index.html" class="backPButton" id="4444">
+                    Back Bergamotte
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
-          <img class="cardSmall" src="img\P4C.png" />
+          <div class="pPlusStuff" id="44">
+            <img class="cardSmall" src="img\P4C.png" />
+
+            <div id="444" class="allAbout">
+              <div class="aboutInfo">
+                <p class="iText">Age: 17</p>
+                <p class="iText">Home: <br />Carikuma Imperial Capital</p>
+                <p class="iText">Hobby: <br />Reading, Alchemy</p>
+                <p class="iText">Favorite Snack: <br />Red Tea</p>
+              </div>
+
+              <p class="quote">"The amount of things people fuss about..."</p>
+              <div class="cButton">
+                <img class="closeB" src="img\close.png" />
+              </div>
+            </div>
+          </div>
         </section>
+
         <section class="pBox" id="5">
-          <div class="textBox">
-            <h1 class="pTitle">Princess General</h1>
-            <h1 class="pName">Flammaria</h1>
-            <div id="p5" class="allAbout">
-              <ul class="pList">
-                <li>Home:</li>
-                <li>Age</li>
-                <li>Home:</li>
-                <li>Home:</li>
-              </ul>
+          <div class="textBox" id="TB5">
+            <div class="NT">
+              <h1 class="pTitle">Pincess Genral</h1>
+              <h1 class="pName">Flammaria</h1>
+            </div>
+            <div id="bigInfo5">
+              <p class="aboutP">
+                The niece of the former emperor Hellard, Flammaria is a powerful
+                woman who accompanied her uncle in the Second Eastern War. She's
+                candidating in an attempt to avoid civil war should the
+                political balance tip. She's heavily supported by everyone with
+                a connection to the military; on the other hand, she has a lot
+                of enemies among the nobles. She likes inventions, and her
+                current favourite is the Salamander Mk 2, a weapon that fires
+                metal spikes using gun powder. She uses one herself, the first
+                prototype from the Imperial Research Institute.
+              </p>
+              <p class="abText">
+                When you back Princess General Flammaria, you aquire two cards
+                from the market with a cost of 5 or less. Also when you back
+                her, Farming Villages do not move into your domain.
+              </p>
+              <div class="bpbuttons">
+                <form>
+                  <button formaction="index.html" class="backPButton" id="5555">
+                    Back Flammaria
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
-          <img class="cardSmall" src="img\P5C.png" />
+          <div class="pPlusStuff" id="55">
+            <img class="cardSmall" src="img\P5C.png" />
+
+            <div id="555" class="allAbout">
+              <div class="aboutInfo">
+                <p class="iText">Age: 19</p>
+                <p class="iText">Home: <br />Prefecture of Galeria</p>
+                <p class="iText">Hobby: <br />Chess</p>
+                <p class="iText">Favorite Snack: <br />Wine</p>
+              </div>
+
+              <p class="quote">"We attack all at once! After Me!"</p>
+              <div class="cButton">
+                <img class="closeB" src="img\close.png" />
+              </div>
+            </div>
+          </div>
         </section>
+
         <section class="pBox" id="6">
-          <div class="textBox">
-            <h1 class="pTitle">Princesses</h1>
-            <h1 class="pName">Lain and Shion</h1>
-            <div id="p6" class="allAbout">
-              <ul class="pList">
-                <li>Home:</li>
-                <li>Age</li>
-                <li>Home:</li>
-                <li>Home:</li>
-              </ul>
+          <div class="textBox" id="TB6">
+            <div class="NT">
+              <h1 class="pTitle">Twin Princesses</h1>
+              <h1 class="pName">Lain and Shion</h1>
+            </div>
+            <div id="bigInfo6">
+              <p class="aboutP">
+                The twins, Lain and Shion, currently rule Elsia, the
+                exceptionally autonomous state in the Empire. In Elsia, magic
+                and fortune telling has always been the object of study, and
+                politics are heavily influenced by this. The royalty are always
+                powerful magicians, and the 16ths rulers Lain and Shion are no
+                exception; in fact, they are said to be the most powerful in
+                Elsia's history. Everything in their state is decided by reading
+                the stars, so naturally their candidacy for the throne was also
+                a result of this.
+              </p>
+              <p class="abText">
+                When you back Lain and Shion the Princess Twins, put X Twin
+                Counters on this card. X is is equal to the number of Princess
+                Cards other players have backed, plus 1. [Activation Ability]
+                (During your Main Phase, remove a Twin Counter from the game):
+                You may take another turn after your current turn ends. You
+                cannot user this ability to take more than one extra turn at a
+                time.
+              </p>
+              <div class="bpbuttons">
+                <form>
+                  <button formaction="index.html" class="backPButton" id="6666">
+                    Back Lain and Shion
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
-          <img class="cardSmall" src="img\P6C.png" />
+          <div class="pPlusStuff" id="66">
+            <img class="cardSmall" src="img\P6C.png" />
+
+            <div id="666" class="allAbout">
+              <div class="aboutInfo">
+                <p class="iText">Age: 12</p>
+                <p class="iText">Home: <br />Imperial State of Elsia</p>
+                <p class="iText">Hobby: <br />Fortune telling</p>
+                <p class="iText">Favorite Snack: <br />Rice dumplings</p>
+              </div>
+
+              <p class="quote">
+                "What do you say, Lain?" "What, Shion?" "Let's do this for fun!"
+              </p>
+              <div class="cButton">
+                <img class="closeB" src="img\close.png" />
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>

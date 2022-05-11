@@ -37,17 +37,40 @@
         <script src="js\index.js"></script>
         <title>Heart of Crown Companion</title>
     </head>
+    <body onload="checkOnLoad()">
+
         <div class="AppTop"> <!-- top bar with icons and hamburger memu --> 
-            <img class="MenuIcon" src="img\hambergerMenu.png"/>
+            <img class="MenuIcon" id="91" src="img\hambergerMenu.png"/>
             <img class="menuTxt" src="img\TopText.svg">
             <img class="MenuIcon" src="img\App IconFULL.png"/>
+
+
+
+
         </div>
         <div class="sectionsBox">
-        <section class="gameSection"> <!-- Contains info pertaining to current game -->
+            <div id="secMore">
+                <h3 class="pText" id="spText">About:</h3>
+                <p class="abtInfo">Heart of Crown Companion ver. 0.8</p>
+                <p class="abtInfo">Developed By: Jeremiah Runtsch</p>
+                <h3 class="pText" id="spText">Options:</h3>
+                <div class="buttonBox">
+                <button class="resetB" id="991">Reset Everything</button>
+                </div> <div class="buttonBox">
+                <button class="resetB" id="992">Reset Points</button>
+                </div>
+                <div class="buttonBox">
+                <button class="resetB" id="993">Reset Princess</button>
+                </div> <div class="buttonBox">
+                <img id="92" class="menuClose" src="img\close.png"/>
+                </div>
+            </div>
+        <section id="gameSection"> <!-- Contains info pertaining to current game -->
             <div class="secTopStuf">
                 <h1 class="secHead">Current Game</h1>
-                <img class="menuDots" src="img\3dots.svg"/>
             </div>
+
+
             <div class="secPoints">
                 <div class="currPoints">
                 <h3 class="pText" id="spText">Succession Points:</h3>
@@ -75,9 +98,16 @@
             </div>
             <section class="princessSec">
                 <h3 class="pText" id="spText">Princess</h3>
-            <div class="buttonBox">
+                <div class="bpInfo" id="1Backed">
+                        <img class="cardFullImg" src="img\P1.png">
+                        <div class="backedText">
+                            <h3 class="backedName">Lulunasaika</h3>
+                        <h3 class="backedTitle">First Imperial Princess</h3>
+                        </div>
+                </div>
+            <div id="buttonBoxP">
                 <form>
-            <button formaction="princessPage.html"class="backPButton">Back A Princess</button>
+            <button formaction="princessPage.html"id="backPButton" >Back A Princess</button>
             </form>
             </div>
             </section>
