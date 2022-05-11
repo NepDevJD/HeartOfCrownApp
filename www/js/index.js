@@ -209,6 +209,7 @@ window.onclick = (e) => {
       document.getElementById("3Backed").style.display = "none";
       document.getElementById("4Backed").style.display = "none";
       document.getElementById("5Backed").style.display = "none";
+      document.getElementById("6Backed").style.display = "none";
       document.getElementById("buttonBoxP").style.display = "flex";
     } else if (e.target.id == 992) { //resets points to 0
       pVal = 0;
@@ -221,6 +222,7 @@ window.onclick = (e) => {
       document.getElementById("3Backed").style.display = "none";
       document.getElementById("4Backed").style.display = "none";
       document.getElementById("5Backed").style.display = "none";
+      document.getElementById("6Backed").style.display = "none";
     }
     //Next section will add or subtract succession points -- all point ids start with 7
     if (e.target.id == 71) {
