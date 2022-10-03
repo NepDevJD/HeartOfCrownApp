@@ -33,7 +33,7 @@ let cVal = 0;
 window.onclick = (e) => {
   //console.log(button); // to get the element
   /* console.log(e.target.className);  // to get the element tag name alone */
-  //console.log(e.target.className);
+  console.log(e.target.className);
 
   //next section for princessPage only
   if (document.URL.includes("princessPage.html")) {
@@ -181,23 +181,29 @@ window.onclick = (e) => {
   else if (document.URL.includes("index.html")) {
     //make sure index is active page
     if (e.target.id == 91) { //opens hamburger menu
-      document.getElementById("secMore").style.animation =
-        "expand7 600ms forwards";
+      
       document.getElementById("secMore").style.display = "flex";
-      document.getElementById("spText").style.animation =
-        "cardFade 200ms forwards";
-      document.getElementById("secMore").style.paddingTop = "10vh";
-    } else if (e.target.id == 92) { //closes menu
-      document.getElementById("secMore").style.animation =
+        document.getElementById("secMore").style.animation =
+          "expand7 600ms forwards";
+        document.getElementById("secMore").style.display = "flex";
+        document.getElementById("spText").style.animation =
+          "cardFade 100ms forwards";
+        document.getElementById("secMore").style.paddingTop = "60vh";
+          document.getElementById("91").style.display = "none";
+          document.getElementById("92").style.display = "flex";
+    }
+  
+      else if (e.target.id == 92){
+        document.getElementById("secMore").style.animation =
         "close7 600ms forwards";
-      setTimeout(() => {
-        document.getElementById("secMore").style.display = "none";
-      }, 600);
-      document.getElementById("secMore").style.paddingTop = "0vh";
-      document.getElementById("secMore").style.height = "0px";
-      document.getElementById("spText").style.animation =
-        "cardFadeR 599ms forwards";
-    } else if (e.target.id == 991) { //resets app.
+        document.getElementById("92").style.display = "none";
+        document.getElementById("91").style.display = "flex";
+
+      }
+    
+    
+
+     else if (e.target.id == 991) { //resets app.
       localStorage.setItem("isPBacked", "no");
       document.getElementById("buttonBoxP").style.display = "flex";
       pVal = 0;
@@ -224,6 +230,8 @@ window.onclick = (e) => {
       document.getElementById("5Backed").style.display = "none";
       document.getElementById("6Backed").style.display = "none";
     }
+
+
     //Next section will add or subtract succession points -- all point ids start with 7
     if (e.target.id == 71) {
       //add 1 point
